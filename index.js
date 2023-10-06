@@ -1,11 +1,13 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const PDFDocument = require('pdfkit'); // Importe a biblioteca pdfkit
+const PDFDocument = require('pdfkit'); 
+const cors = require('cors');
 const fs = require('fs');
 const app = express();
 const port = 3000;
 
+app.use(cors());
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/');
