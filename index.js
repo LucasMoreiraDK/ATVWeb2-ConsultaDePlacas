@@ -7,7 +7,11 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: '*', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Permita os métodos HTTP desejados
+}));
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/');
