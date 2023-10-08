@@ -8,9 +8,10 @@ const app = express();
 const port = 3000;
 
 app.use(cors({
-  origin: '*', 
+  origin: ['https://front-end-placas.vercel.app/consulta-placa'], // Permita solicitações apenas dessas origens
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Permita os métodos HTTP desejados
 }));
+
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
