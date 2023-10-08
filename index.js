@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors({
-  origin: ['https://front-end-placas.vercel.app/consulta-placa'], // Permita solicitações apenas dessas origens
+  origin: ['https://front-end-placas.vercel.app/relatorio/cidade/', 'https://front-end-placas.vercel.app/','https://front-end-placas.vercel.app/consulta'], // Permita solicitações apenas dessas origens
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Permita os métodos HTTP desejados
 }));
 
